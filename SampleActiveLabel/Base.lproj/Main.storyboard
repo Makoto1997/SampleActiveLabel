@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,27 +13,40 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleActiveLabel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5u-EB-pLD">
-                                <rect key="frame" x="107" y="348" width="200" height="200"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="inc-hg-YsF"/>
-                                    <constraint firstAttribute="width" constant="200" id="xI9-gC-gjQ"/>
-                                </constraints>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="MgD-Ce-hoc">
+                                <rect key="frame" x="50" y="100" width="220" height="368"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5u-EB-pLD">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="103.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zf9-y2-Fo2">
+                                        <rect key="frame" x="0.0" y="132.5" width="220" height="103"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xz-fn-JZJ">
+                                        <rect key="frame" x="0.0" y="264.5" width="220" height="103.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="N5u-EB-pLD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bUE-FW-qz0"/>
-                            <constraint firstItem="N5u-EB-pLD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iih-uq-fCN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MgD-Ce-hoc" secondAttribute="bottom" constant="100" id="2pH-3u-uL5"/>
+                            <constraint firstItem="MgD-Ce-hoc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="oCY-GK-RBf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MgD-Ce-hoc" secondAttribute="trailing" constant="50" id="tYF-cU-zeg"/>
+                            <constraint firstItem="MgD-Ce-hoc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="vY2-om-PmO"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="urlLabelView" destination="N5u-EB-pLD" id="1Ym-t5-ZOo"/>
+                        <outlet property="hashtagView" destination="Zf9-y2-Fo2" id="KOA-ux-N7a"/>
+                        <outlet property="mentionView" destination="0xz-fn-JZJ" id="1uW-fS-p14"/>
+                        <outlet property="urlView" destination="N5u-EB-pLD" id="pzV-pR-IB8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
