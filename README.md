@@ -1,1 +1,1 @@
-# SampleActiveLabel
+ActiveLabelライブラリのサンプルです。
